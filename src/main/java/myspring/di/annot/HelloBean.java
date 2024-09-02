@@ -2,6 +2,8 @@ package myspring.di.annot;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,10 +14,12 @@ public class HelloBean {
 	@Value("${myName}") //("어노테이션")
 	String name;
 	
-	@Autowired
-	@Qualifier("stringPrinter")
+//	@Autowired
+//	@Qualifier("stringPrinter")
+	@Resource(name="${printerName}")
 	PrinterBean printer;
 	
+	@Value("#{'${arrayOfStrings}'.split(',')}")
 	List<String> names;
 
 	public HelloBean() {
