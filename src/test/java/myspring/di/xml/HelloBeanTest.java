@@ -20,7 +20,8 @@ class HelloBeanTest {
 	
 	@Test
 	void helloBean() {
-		
+		//2. Container생성한 Spring Bean 요청
+		context.getBean("hello");
 	}
 	
 	
