@@ -2,6 +2,8 @@ package myspring.di.xml;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.function.Consumer;
+
 import javax.annotation.Resource;
 
 import org.junit.jupiter.api.Disabled;
@@ -33,6 +35,23 @@ class HelloSpringTest {
 	void helloBean() {
 		assertEquals("Hello 어노테이션", bean.sayHello());
 		bean.print();
+		
+		assertEquals(4, bean.getNames().size());
+		
+		//1.Anonymous Inner class
+		bean.getNames().forEach(new Consumer<String>() {
+			@Override
+			public void accept(String name) {
+				System.out.println(name);				
+			}
+		});
+		
+		//2. Lambda Expression
+		//forEach(Consumer) Consumer  void accept(T t);  
+		bean.getNames().forEach(name -> System.out.println(name));
+		//3. Method Reference
+		bean.getNames().forEach(System.out::println);
+		
 		assertEquals("Hello 어노테이션", printer.toString());
 	}
 	
