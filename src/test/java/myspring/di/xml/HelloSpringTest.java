@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import myspring.di.annot.HelloBean;
+import myspring.di.annot.PrinterBean;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = "classpath:spring_hellobean.xml")
@@ -25,9 +26,14 @@ class HelloSpringTest {
 	@Resource(name="helloBean")
 	HelloBean bean;
 	
+	@Resource(name="stringPrinter")
+	PrinterBean printer;
+	
 	@Test
 	void helloBean() {
 		assertEquals("Hello 어노테이션", bean.sayHello());
+		bean.print();
+		assertEquals("Hello 어노테이션", printer.toString());
 	}
 	
 	@Test @Disabled

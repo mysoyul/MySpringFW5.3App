@@ -27,4 +27,7 @@
 	<!-- Bean AutoScanning -->
 	<context:component-scan base-package="myspring.di.annot" />
 	
+	<!-- properties file 추가 -->
+	<context:property-placeholder location="classpath:values.properties" />
+	
 </beans>
