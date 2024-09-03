@@ -42,7 +42,7 @@ class DBTest {
 	@Test 
 	void userSvc() {
 		UserVO user = userService.getUser("gildong");
-		user.setCity("경기");
+		user.setCity("서울");
 		System.out.println(user);
 		
 		userService.updateUser(user);

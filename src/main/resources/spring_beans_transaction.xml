@@ -25,8 +25,8 @@
 
 			<!--No existing transaction found for transaction marked with propagation 'mandatory'-->			
 			<tx:method name="updateUser" propagation="NOT_SUPPORTED"/> 
-			<tx:method name="update" propagation="REQUIRED" />
-<!-- 			<tx:method name="update" propagation="MANDATORY" /> -->
+<!-- 			<tx:method name="update" propagation="REQUIRED" /> -->
+			<tx:method name="update" propagation="MANDATORY" />
 		</tx:attributes>
 	</tx:advice>
 	
