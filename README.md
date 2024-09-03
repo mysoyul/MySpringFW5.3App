@@ -60,7 +60,8 @@
 * 상세 정보는 서블릿 스펙 8.2.2 2c 장을 참조하십시오. 
 * 절대적 순서배열을 사용하는 것을 고려해 보십시오.
 
-* web.xml에 <absolute-ordering /> 태그 추가
+* web.xml 
+* <absolute-ordering />태그 추가
 ```
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
