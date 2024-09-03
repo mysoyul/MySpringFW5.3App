@@ -16,6 +16,7 @@
     "city": "경기"
 }
 ```
+![Insert](./image/post_insert.png)
       
 * userId로 조회
 ```
