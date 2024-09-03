@@ -39,7 +39,16 @@ class DBTest {
 	@Autowired
 	UserService userService;
 	
-	@Test
+	@Test 
+	void userSvc() {
+		UserVO user = userService.getUser("gildong");
+		user.setCity("경기");
+		System.out.println(user);
+		
+		userService.updateUser(user);
+	}
+	
+	@Test @Disabled
 	void service() {
 		UserVO user = userService.getUser("dooly");
 		assertEquals("둘리", user.getName());
