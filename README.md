@@ -24,6 +24,7 @@
     http://localhost:8080/MySpringFW/users/dooly
 
 ```
+![Select](./image/get_select.png)
 
 * 목록조회
 ```
