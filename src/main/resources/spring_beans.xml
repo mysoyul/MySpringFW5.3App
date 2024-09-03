@@ -5,9 +5,13 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
+	
+	<!-- AOP 설정 -->
 	<import resource="classpath:spring_beans_aop.xml"/>
 
+	<!-- Transaction 설정 -->
+	<import resource="classpath:spring_beans_transaction.xml"/>
+	
 	<context:component-scan base-package="myspring.**.dao,myspring.**.service" />
 	
 	<!-- properties file 추가 -->
