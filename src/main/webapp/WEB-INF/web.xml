@@ -12,4 +12,29 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<!-- Service Layer , Data Access Layer를 위한 Spring 설정  XML  -->
+		<param-value>classpath:spring_beans.xml</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<!-- Presentation Layer를 위한 Spring 설정 XML -->
+			<param-value>classpath:spring_beans_web.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+  
+  
 </web-app>
