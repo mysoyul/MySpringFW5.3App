@@ -14,7 +14,7 @@
   
   	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<!-- Service Layer , Data Access Layer를 위한 Spring 설정  XML  -->
+		<!-- Service Layer, Data Access Layer를 위한 Spring 설정  XML  -->
 		<param-value>classpath:spring_beans.xml</param-value>
 	</context-param>
 
