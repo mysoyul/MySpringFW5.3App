@@ -8,11 +8,11 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -29,7 +29,7 @@ class DBTest {
 	SqlSessionFactory sessionFactory;
 	
 	@Autowired
-	SqlSessionTemplate sqlSession;
+	SqlSession sqlSession;
 	
 	@Test
 	void mybatis() {
