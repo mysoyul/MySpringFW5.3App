@@ -8,6 +8,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- AOP 설정 시작 -->
+	
+	<!-- Advice 클래스를 Bean으로 등록 -->
+	<bean id="performanceTraceAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
+	
 	<aop:config>
 		<aop:aspect id="traceAspect" ref="performanceTraceAdvice">
 			<aop:around pointcut="execution(public * myspring.user..*(..))||execution(public * myspring.student..*(..))"
@@ -15,8 +19,6 @@
 		</aop:aspect>
 	</aop:config>
 
-	<!-- Advice 클래스를 Bean으로 등록 -->
-	<bean id="performanceTraceAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
 	
 	<!-- @Aspect가 선언된 모든 Bean을 Aspect로 자동 등록해줌 -->
 	<aop:aspectj-autoproxy />
