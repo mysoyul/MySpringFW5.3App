@@ -17,6 +17,11 @@
 
 	<!-- Advice 클래스를 Bean으로 등록 -->
 	<bean id="performanceTraceAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
+	
+	<!-- @Aspect가 선언된 모든 Bean을 Aspect로 자동 등록해줌 -->
+	<aop:aspectj-autoproxy />
+	
+	<context:component-scan base-package="myspring.aop.annot" />
 	<!-- AOP 설정 끝 -->
 	
 </beans>
