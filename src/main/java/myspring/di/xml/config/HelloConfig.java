@@ -23,6 +23,8 @@ public class HelloConfig {
 		hello.setPrinter(stringPringer());
 		return hello;
 	}
+	
+	@Bean
 	public Printer stringPringer() {
 		return new StringPrinter();
 	}
