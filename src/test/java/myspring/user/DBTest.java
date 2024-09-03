@@ -3,6 +3,7 @@ package myspring.user;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -23,6 +24,10 @@ class DBTest {
 	void connection() {
 		try {
 			Connection connection = dataSource.getConnection();
+			DatabaseMetaData metaData = connection.getMetaData();
+			System.out.println("DB URL = " + metaData.getURL());
+			System.out.println("DB Username =" + metaData.getUserName());
+			System.out.println("DB Product =" + metaData.getDatabaseProductName());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
