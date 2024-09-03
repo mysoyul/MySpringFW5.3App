@@ -18,6 +18,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import myspring.user.dao.mapper.UserMapper;
+import myspring.user.service.UserService;
 import myspring.user.vo.UserVO;
 
 @ExtendWith(SpringExtension.class)
@@ -35,7 +36,17 @@ class DBTest {
 	@Autowired
 	UserMapper userMapper;
 	
+	@Autowired
+	UserService userService;
+	
 	@Test
+	void service() {
+		UserVO user = userService.getUser("dooly");
+		assertEquals("둘리", user.getName());
+	}
+	
+	
+	@Test @Disabled
 	void mapper() {
 		UserVO user = userMapper.selectUserById("dooly");
 		System.out.println(user);
