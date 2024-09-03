@@ -24,7 +24,8 @@ public class PerformanceTraceAdvice {
 		try {
 			//new Object[] {new String("dooly")}
 			//타겟의 메서드 호출
-			Object result = joinPoint.proceed();
+			Object result = joinPoint.proceed(new Object[] {new String("gildong")}); 
+					//joinPoint.proceed();
 			return result;
 		} finally {
 			//타겟의 메서드가 호출된 후의 시간
