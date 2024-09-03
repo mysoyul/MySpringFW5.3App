@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 class DBTest {
 	@Autowired
 	DataSource dataSource;
+	
+	@Autowired
+	SqlSessionFactory sessionFactory;
 	
 	@Test
 	void connection() {
