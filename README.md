@@ -61,7 +61,7 @@
 * 절대적 순서배열을 사용하는 것을 고려해 보십시오.
 
 * web.xml 
-* <absolute-ordering />태그 추가
+* absolute-ordering 태그 추가
 ```
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
